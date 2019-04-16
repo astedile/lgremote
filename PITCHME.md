@@ -1,4 +1,4 @@
-# Remote-controlling a smart TV with HTTP
+## Remote-Controlling a Smart TV with HTTP
 
 Alexander Stedile\
 Bernhard Trummer
