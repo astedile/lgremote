@@ -1,9 +1,9 @@
 ---
+@title[Title]
 
-# Remote-Controlling a Smart TV with HTTP
+@size[3em](Remote-Controlling a Smart TV with HTTP)
 
-Alexander Stedile\
-Bernhard Trummer
+Alexander Stedile, Bernhard (Slash) Trummer
 
 Presented at Grazer Linuxtage 2019
 
