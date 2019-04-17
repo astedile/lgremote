@@ -1,4 +1,6 @@
-## Remote-Controlling a Smart TV with HTTP
+---
+
+# Remote-Controlling a Smart TV with HTTP
 
 Alexander Stedile\
 Bernhard Trummer
@@ -8,17 +10,20 @@ Presented at Grazer Linuxtage 2019
 ---
 
 ## Abstract
-TODO: Translate
 
-"Reines Software-Projekt, keine HW-Basteleien. Ein bisschen NW-Technik für Forschung."
+A pure programming project, no device needs to be built.
+A little bit of network engineering for research.
 
 ---
 
-## Overview
+## Presentation Overview
 
-+++
-
-### Table of Contents
+- Motivation
+- Aim
+- Research
+- API, Protocol
+- Application lgremote
+- Lessons Learned
 
 ---
 
