@@ -1,7 +1,7 @@
 ---
 @title[Title]
 
-@size[3em](Remote-Controlling a Smart TV with HTTP)
+@size[2.7em](Remote-Controlling a Smart TV with HTTP)
 
 Alexander Stedile, Bernhard (Slash) Trummer
 
@@ -10,6 +10,8 @@ Presented at Grazer Linuxtage 2019
 ---
 
 ## Abstract
+
+Remote-Controlling a Smart TV with HTTP
 
 A pure programming project, no device needs to be built.
 A little bit of network engineering for research.
@@ -29,13 +31,28 @@ A little bit of network engineering for research.
 
 ## Motivation
 
+The TV has so many ways to interact with it. 
+
+How can I get access to it for building my own remote control features?
+
 +++
 
 ### Smart TV Connectivity 
 
+LG Smart TV 42LA6608-ZA
+* Broadcast: DVB-T/C/S
+* Video: HDMI, Scart, Chinch
+* USB
+* LAN, WLAN
+* Remote control: Infrared, Radio (Magic Remote), Android App
+
 ---
 
 ## Aim
+
+I want to be able to invent and try out new features 
+for a smarter remote control. 
+It should be easy to add and modify functionality.
 
 ---
 
@@ -44,9 +61,10 @@ A little bit of network engineering for research.
 +++
 
 ### Packet Sniffing
-WLAN network setup
-tcpdump
-Screenshot Wireshark
+
+* WLAN network setup
+* tcpdump
+* Wireshark
 
 +++
 
@@ -93,6 +111,8 @@ Screenshot Wireshark
 ---
 
 ## References
+
+* lgremote project: https://github.com/astedile/lgremote
 * LG TV 2012 mit deviceinfo steuern, funktioniert in Neo - https://homematic-forum.de/forum/viewtopic.php?t=29820
 
 ---
@@ -102,4 +122,7 @@ Screenshot Wireshark
 ---
 
 ## Feedback
+
+Is very welcome. Talk to me today 
+or use the feedback feature on www.linuxtage.at
 
