@@ -91,7 +91,27 @@ It should be easy to add and modify functionality.
 
 +++
 
-### Features
+### Tab 1: Connect
+
+![connect](assets/img/tab_connect.png)
+
++++
+
+### Tab 2: Virt RC
+
+![virt RC](assets/img/tab_virt_RC.png)
+
++++
+
+### Tab 3: Feature
+
+![feature](assets/img/tab_feature.png)
+
++++
+
+### Tab 4: Skip CH
+
+![skip CH](assets/img/tab_skip_CH.png)
 
 +++
 
