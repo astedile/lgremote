@@ -155,11 +155,11 @@ Also to the TV stations for retrieving additional contents.
 
 ## References
 
-* lgremote project\
+* lgremote project  
 https://github.com/astedile/lgremote
-* LG TV Remote Adnroid App\
+* LG TV Remote Adnroid App  
 https://play.google.com/store/apps/details?id=com.lge.tv.remoteapps
-* LG TV 2012 mit deviceinfo steuern, funktioniert in Neo\
+* LG TV 2012 mit deviceinfo steuern, funktioniert in Neo  
 https://homematic-forum.de/forum/viewtopic.php?t=29820
 
 ---
