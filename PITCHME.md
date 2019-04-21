@@ -74,6 +74,22 @@ It should be easy to add and modify functionality.
 
 ## ROAP - API, Protocol
 
+* HTTP (GET and POST)
+* XML payload (Media Type: application/atom+xml)
+
+![example command](assets/img/example_command_send_ok_key.png)
+
++++
+
+## ROAP - API, Protocol Phases
+
+RC Client &#8596; TV
+* &#8592; Device discovery &#8212;
+* &#8212; Authentication &#8594;
+* &#8212; Data request &#8594;
+* &#8212; Command &#8594;
+* &#8592; Event &#8594;
+
 ---
 
 ## Application lgremote
@@ -82,12 +98,17 @@ It should be easy to add and modify functionality.
 
 ### Scope
 
+* Replacement for remote control
+* Automating repeated actions
+* Dynamic favourite channel list
+
 +++
 
 ### Out of Scope
 * Device discovery phase
 * Digital video recorder
 * Teletext
+* Magic Remote pointer
 
 +++
 
@@ -126,14 +147,20 @@ It should be easy to add and modify functionality.
 * Current volume leven cannot be queried.
 * Uplink to Internet is required for TV to accept network connection.
 * Turning off TV takes 15 seconds if "byebye" event cannot be sent to connected client.
-* For selecting a channel, 4 parameters have to be sent. (Can be queried with channel list.)
-
+* For selecting a channel, 4 parameters have to be sent. 
+(Can be queried with channel list.)
+* The smart TV sends lots of requests to the Internet.
+Also to the TV stations for retrieving additional contents.
 ---
 
 ## References
 
-* lgremote project: https://github.com/astedile/lgremote
-* LG TV 2012 mit deviceinfo steuern, funktioniert in Neo - https://homematic-forum.de/forum/viewtopic.php?t=29820
+* lgremote project\
+https://github.com/astedile/lgremote
+* LG TV Remote Adnroid App\
+https://play.google.com/store/apps/details?id=com.lge.tv.remoteapps
+* LG TV 2012 mit deviceinfo steuern, funktioniert in Neo\
+https://homematic-forum.de/forum/viewtopic.php?t=29820
 
 ---
 
@@ -143,6 +170,5 @@ It should be easy to add and modify functionality.
 
 ## Feedback
 
-Is very welcome. Talk to me today 
+is very welcome. Talk to me today 
 or use the feedback feature on www.linuxtage.at
-
