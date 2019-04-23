@@ -64,23 +64,28 @@ LG Smart TV 42LA6608-ZA
 
 I want to be able to invent and try out new features 
 for a smarter remote control. 
+
 It should be easy to add and modify functionality.
 
 ---
 
+@snap[west span-65]
 ## Research
 
-+++
-
-### Packet Sniffing
-
+Packet Sniffing
+@ul[](false)
 * WLAN network setup
 * tcpdump
 * Wireshark
+@endul
 
-+++
+Internet Research
 
-### Internet Research
+@snapend
+
+@snap[east span-35]
+![research](assets/img/research_half.jpg)
+@snapend
 
 ---
 
