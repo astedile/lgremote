@@ -37,9 +37,11 @@ How can I get access to it for building my own remote control features?
 
 +++
 
+@snap[north span-10]
 ### Smart TV Connectivity 
+@snapend
 
-@snap[east span-40]
+@snap[south-west span-60]
 
 LG Smart TV 42LA6608-ZA
 * Broadcast: DVB-T/C/S
@@ -50,7 +52,7 @@ LG Smart TV 42LA6608-ZA
 
 @snapend
 
-@snap[west span-60]
+@snap[south-east span-40]
 ![network diagram](assets/img/network_diagram.jpg)
 @snapend
 
