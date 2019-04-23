@@ -39,12 +39,18 @@ How can I get access to it for building my own remote control features?
 
 ### Smart TV Connectivity 
 
+@snap[east span-50]
 LG Smart TV 42LA6608-ZA
 * Broadcast: DVB-T/C/S
 * Video: HDMI, Scart, Chinch
 * USB
 * LAN, WLAN
 * Remote control: Infrared, Radio (Magic Remote), Android App
+@snapend
+
+@snap[west span-50]
+![network diagram](assets/img/network_diagram.jpg)
+@snapend
 
 ---
 
@@ -157,9 +163,9 @@ Also to the TV stations for retrieving additional contents.
 
 * lgremote project  
 https://github.com/astedile/lgremote
-* LG TV Remote Adnroid App  
+* LG TV Remote Adnroid App - 
 https://play.google.com/store/apps/details?id=com.lge.tv.remoteapps
-* LG TV 2012 mit deviceinfo steuern, funktioniert in Neo  
+* LG TV 2012 mit deviceinfo steuern, funktioniert in Neo - 
 https://homematic-forum.de/forum/viewtopic.php?t=29820
 
 ---
