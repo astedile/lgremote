@@ -39,16 +39,18 @@ How can I get access to it for building my own remote control features?
 
 ### Smart TV Connectivity 
 
-@snap[east span-50]
+@snap[east span-40]
+
 LG Smart TV 42LA6608-ZA
 * Broadcast: DVB-T/C/S
 * Video: HDMI, Scart, Chinch
 * USB
 * LAN, WLAN
 * Remote control: Infrared, Radio (Magic Remote), Android App
+
 @snapend
 
-@snap[west span-50]
+@snap[west span-60]
 ![network diagram](assets/img/network_diagram.jpg)
 @snapend
 
