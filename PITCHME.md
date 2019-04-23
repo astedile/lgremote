@@ -45,7 +45,7 @@ How can I get access to it for building my own remote control features?
 
 LG Smart TV 42LA6608-ZA
 
-@ul[split-screen-list](false)
+@ul[](false)
 * Broadcast: DVB-T/C/S
 * Video: HDMI, Scart, Chinch
 * USB
