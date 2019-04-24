@@ -44,6 +44,7 @@ How can I get access to it for building my own remote control features?
 @snap[south-west span-60]
 
 LG Smart TV 42LA6608-ZA
+<br/>
 
 @ul[](false)
 * Broadcast: DVB-T/C/S
@@ -69,7 +70,7 @@ It should be easy to add and modify functionality.
 
 ---
 
-@snap[west span-65]
+@snap[north-west span-65]
 ## Research
 
 Packet Sniffing
@@ -86,6 +87,12 @@ Internet Research
 @snap[east span-35]
 ![research](assets/img/research_half.jpg)
 @snapend
+
++++
+
+### Research Network Setup
+
+![research](assets/img/network_diagram_research.jpg)
 
 ---
 
