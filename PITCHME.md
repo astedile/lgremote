@@ -113,9 +113,9 @@ But we always got back: 401
 ### Fun Facts
 
 @ul[]
-- When the official app queries the EPG<br/>
+- When the official app queries the EPG\
 GET [/roap/api/data?target=SearchQRYEpgInfo]() HTTP/1.1
-- ... the TV responds with a:<br/>
+- ... the TV responds with a:\
 HTTP/1.1 500 Internal Server Error
 @ulend
 
@@ -178,17 +178,29 @@ RC Client &#8596; TV
 
 ![connect](assets/img/tab_connect.png)
 
+1. Request auth key ... TV displays a six digit secret key.
+1. Connect ... Client is paired until Disconnect or TV is turned off.
+
 +++
 
 ### Tab 2: Virt RC
 
 ![virt RC](assets/img/tab_virt_RC.png)
 
+1. Current channel is displayed with name.
+1. off ... turn off TV
+1. @color[red](A) ... Favourite channel list A should be selected but is not.
+1. Documented keys can be pressed to send commands to TV. 
+
 +++
 
 ### Tab 3: Feature
 
 ![feature](assets/img/tab_feature.png)
+
+1. Fade out/in ... decrease/increase volume (with limit)
+1. Channels down/up ... walk through channel list (with skipping)
+1. Swap ... exchange current channel with stored channel
 
 +++
 
