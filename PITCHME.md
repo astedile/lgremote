@@ -80,7 +80,7 @@ Packet Sniffing
 * Wireshark
 @ulend
 
-<br/>
+<br/><br/>
 Internet Research
 
 @snapend
@@ -109,7 +109,7 @@ Internet Research
 
 +++
 
-### Fun Facts
+### Fun Fact
 
 @ul[]
 - When the official app queries the EPG: GET [/roap/api/data?target=SearchQRYEpgInfo]() HTTP/1.1
@@ -175,8 +175,8 @@ RC Client &#8596; TV
 
 ![connect](assets/img/tab_connect.png)
 
-1. Request auth key ... TV displays a six digit secret key.
-1. Connect ... Client is paired until Disconnect or TV is turned off.
+1. Request auth key ... TV shows secret six digit key
+1. Connect ... Client is paired until Disconnect or TV is turned off
 
 +++
 
@@ -184,10 +184,10 @@ RC Client &#8596; TV
 
 ![virt RC](assets/img/tab_virt_RC.png)
 
-1. Current channel is displayed with name.
+1. Current channel is displayed with name
 1. off ... turn off TV
-1. @color[red](A) ... Favourite channel list A is not selected.
-1. Press documented keys to send commands to TV. 
+1. @color[red](A) ... Favourite channel list A is not selected
+1. Press documented keys to send commands to TV
 
 +++
 
@@ -195,7 +195,7 @@ RC Client &#8596; TV
 
 ![feature](assets/img/tab_feature.png)
 
-1. Fade out/in ... decrease/increase volume (with limit)
+1. Fade out/in ... lower/raise volume (with limit)
 1. Channels down/up ... walk through channel list (with skipping)
 1. Swap ... exchange current and stored channel
 
@@ -205,6 +205,7 @@ RC Client &#8596; TV
 
 ![skip CH](assets/img/tab_skip_CH.png)
 
+1. Channels will be omitted when walking up/down
 1. add/remove/clear ... choose channels to skip
 1. invert ... swap chosen and non-chosen channels 
 
