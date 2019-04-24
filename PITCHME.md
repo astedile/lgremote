@@ -44,7 +44,7 @@ How can I get access to it for building my own remote control features?
 @snap[south-west span-60]
 
 LG Smart TV 42LA6608-ZA
-<br/>
+<br/><br/>
 
 @ul[](false)
 * Broadcast: DVB-T/C/S
@@ -100,8 +100,7 @@ Internet Research
 ### Research Approach
 
 @ul[]
-- Initially we just tried to replay requests sent by the official app. 
-But we always got back: 401
+- Initially we just tried to replay requests sent by the official app. But we always got back: 401
 - No encryption, no authentication headers (etc.) in requests. WTF?
 - Theory: TV does some MAC or IP whitelisting.
 - Reset official app and repeat sniffing of the communication from the very beginning.
@@ -113,10 +112,8 @@ But we always got back: 401
 ### Fun Facts
 
 @ul[]
-- When the official app queries the EPG\
-GET [/roap/api/data?target=SearchQRYEpgInfo]() HTTP/1.1
-- ... the TV responds with a:\
-HTTP/1.1 500 Internal Server Error
+- When the official app queries the EPG: GET [/roap/api/data?target=SearchQRYEpgInfo]() HTTP/1.1
+- ... the TV responds with a: HTTP/1.1 500 Internal Server Error
 @ulend
 
 +++
@@ -136,8 +133,8 @@ HTTP/1.1 500 Internal Server Error
 
 ## ROAP - API, Protocol
 
-* HTTP (GET and POST)
-* XML payload (Media Type: application/atom+xml)
+* HTTP, GET and POST
+* XML payload, Media Type: application/atom+xml
 
 ![example command](assets/img/example_command_send_ok_key.png)
 
@@ -146,10 +143,10 @@ HTTP/1.1 500 Internal Server Error
 ## ROAP - API, Protocol Phases
 
 RC Client &#8596; TV
-* &#8592; Device discovery &#8212;
-* &#8212; Authentication &#8594;
-* &#8212; Data request &#8594;
-* &#8212; Command &#8594;
+* &#8592; Device discovery &#8213;
+* &#8213; Authentication &#8594;
+* &#8213; Data request &#8594;
+* &#8213; Command &#8594;
 * &#8592; Event &#8594;
 
 ---
@@ -189,8 +186,8 @@ RC Client &#8596; TV
 
 1. Current channel is displayed with name.
 1. off ... turn off TV
-1. @color[red](A) ... Favourite channel list A should be selected but is not.
-1. Documented keys can be pressed to send commands to TV. 
+1. @color[red](A) ... Favourite channel list A is not selected.
+1. Press documented keys to send commands to TV. 
 
 +++
 
@@ -200,7 +197,7 @@ RC Client &#8596; TV
 
 1. Fade out/in ... decrease/increase volume (with limit)
 1. Channels down/up ... walk through channel list (with skipping)
-1. Swap ... exchange current channel with stored channel
+1. Swap ... exchange current and stored channel
 
 +++
 
@@ -208,23 +205,31 @@ RC Client &#8596; TV
 
 ![skip CH](assets/img/tab_skip_CH.png)
 
+1. add/remove/clear ... choose channels to skip
+1. invert ... swap chosen and non-chosen channels 
+
 +++
 
 ### Ideas for Further Features
-* On/off toggle for skipping channels
-* Look if commercials are finished
-* Repeatedly query current program info
+
+@ul[]
+- On/off toggle for skipping channels
+- Look if commercials are finished
+- Repeatedly query current program info
+@ulend 
 
 ---
 
 ## Lessons Learned
-* Current volume level cannot be queried.
-* Uplink to Internet is required for TV to accept network connection.
-* Turning off TV takes 15 seconds if "byebye" event cannot be sent to connected client.
-* For selecting a channel, 4 parameters have to be sent. 
-(Can be queried with channel list.)
-* The smart TV sends lots of requests to the Internet.
-Also to the TV stations for retrieving additional contents.
+
+@ul[]
+- Current volume level cannot be queried.
+- Uplink to Internet is required for TV to accept network connection.
+- Turning off TV takes 15 seconds if "byebye" event cannot be sent to connected client.
+- For selecting a channel, 4 parameters have to be sent. (Can be queried with channel list.)
+- The smart TV sends lots of requests to the Internet. Also to the TV stations for retrieving additional contents.
+@ulend
+
 ---
 
 ## References
