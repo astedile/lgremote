@@ -113,9 +113,9 @@ But we always got back: 401
 ### Fun Facts
 
 @ul[]
-- When the official app queries the EPG  
+- When the official app queries the EPG<br/>
 GET [/roap/api/data?target=SearchQRYEpgInfo]() HTTP/1.1
-- ... the TV responds with a:  
+- ... the TV responds with a:<br/>
 HTTP/1.1 500 Internal Server Error
 @ulend
 
