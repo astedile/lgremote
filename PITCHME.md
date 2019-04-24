@@ -80,6 +80,7 @@ Packet Sniffing
 * Wireshark
 @ulend
 
+<br/>
 Internet Research
 
 @snapend
@@ -93,6 +94,43 @@ Internet Research
 ### Research Network Setup
 
 ![research nw](assets/img/network_diagram_research.jpg)
+
++++
+
+### Research Approach
+
+@ul[]
+- Initially we just tried to replay requests sent by the official app. 
+But we always got back: 401
+- No encryption, no authentication headers (etc.) in requests. WTF?
+- Theory: TV does some MAC or IP whitelisting.
+- Reset official app and repeat sniffing of the communication from the very beginning.
+- There's a simple "pairing" process. After replaying it, all kinds of "real" requests work.
+@ulend
+
++++
+
+### Fun Facts
+
+@ul[]
+- When the official app queries the EPG  
+GET [/roap/api/data?target=SearchQRYEpgInfo]() HTTP/1.1
+- ... the TV responds with a:  
+HTTP/1.1 500 Internal Server Error
+@ulend
+
++++
+
+### Not-so-fun Facts
+
+@ul[]
+- "red button" is e.g. loaded from http://hbbtv.prosiebensat1puls4.com
+- ... with a lot of (tracking?) cookies in the request
+- The "red button" content is effectively just JavaScript executed in the TV's browser
+- ... including external tracking (http://cdn.wbtrk.net/js/geid.min.js)
+- All communication is plain text HTTP!
+- Injection of arbitrary JavaScript via MITM attacks &#8594; easy
+@ulend
 
 ---
 
@@ -168,7 +206,7 @@ RC Client &#8596; TV
 ---
 
 ## Lessons Learned
-* Current volume leven cannot be queried.
+* Current volume level cannot be queried.
 * Uplink to Internet is required for TV to accept network connection.
 * Turning off TV takes 15 seconds if "byebye" event cannot be sent to connected client.
 * For selecting a channel, 4 parameters have to be sent. 
@@ -181,7 +219,7 @@ Also to the TV stations for retrieving additional contents.
 
 * lgremote project  
 https://github.com/astedile/lgremote
-* LG TV Remote Adnroid App - 
+* LG TV Remote Android App - 
 https://play.google.com/store/apps/details?id=com.lge.tv.remoteapps
 * LG TV 2012 mit deviceinfo steuern, funktioniert in Neo - 
 https://homematic-forum.de/forum/viewtopic.php?t=29820

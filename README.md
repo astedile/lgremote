@@ -1,6 +1,8 @@
 # lgremote
 Java application with Swing UI for remote-controlling an LG smart TV using it's ROAP interface.
 
+Presentation: https://gitpitch.com/astedile/lgremote
+
 ## Specifications
 This application is tested with 
 - Java 1.8.0_201
