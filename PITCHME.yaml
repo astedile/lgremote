@@ -32,7 +32,7 @@ logo-position : top-left
 # Footnote Setting
 # Doc: https://gitpitch.com/docs/settings/footnote
 #
-footnote : "GitPitch - The Fastest Way From Idea To Presentation"
+footnote : "lgremote - Remote-Controlling a Smart TV with HTTP"
 
 #
 # Highlight (Code) Setting
@@ -58,6 +58,6 @@ transition : none
 # Twitter Card Settings
 # Doc: https://gitpitch.com/docs/settings/twitter-card
 #
-title : "GitPitch - The Quickstart Template"
-description : "High-utility markdown slide templates for GitPitch presentation authors."
-thumbnail : https://gitpitch.com/gpimg/the-template-thumb.jpg
+title : "lgremote - Remote-Controlling a Smart TV with HTTP"
+description : "Presentation for Grazer Linuxtage 2019"
+#thumbnail :

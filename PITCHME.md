@@ -5,7 +5,7 @@
 
 Alexander Stedile, Bernhard (Slash) Trummer
 
-Presented at Grazer Linuxtage 2019
+Presented at [Grazer Linuxtage 2019](https://www.linuxtage.at/)
 
 ---
 
@@ -99,13 +99,13 @@ Internet Research
 
 ### Research Approach
 
-@ul[]
+@ol[]
 - Initially we just tried to replay requests sent by the official app. But we always got back: 401
 - No encryption, no authentication headers (etc.) in requests. WTF?
 - Theory: TV does some MAC or IP whitelisting.
 - Reset official app and repeat sniffing of the communication from the very beginning.
 - There's a simple "pairing" process. After replaying it, all kinds of "real" requests work.
-@ulend
+@olend
 
 +++
 
