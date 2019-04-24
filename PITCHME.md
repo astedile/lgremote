@@ -55,7 +55,7 @@ LG Smart TV 42LA6608-ZA
 @ulend
 @snapend
 
-@snap[south-east span-40]
+@snap[east span-40]
 ![network diagram](assets/img/network_diagram.jpg)
 @snapend
 
@@ -153,6 +153,11 @@ RC Client &#8596; TV
 
 ## Application lgremote
 
+* Java 8
+* Spring boot
+* Swing GUI
+* Maven (clean, compile, test, spring-boot:run)
+
 +++
 
 ### Scope
@@ -168,6 +173,8 @@ RC Client &#8596; TV
 * Digital video recorder
 * Teletext
 * Magic Remote pointer
+* Custom Android App
+* Different ROAP API version for other/newer TV models
 
 +++
 
@@ -185,9 +192,9 @@ RC Client &#8596; TV
 ![virt RC](assets/img/tab_virt_RC.png)
 
 1. Current channel is displayed with name
+1. **@color[red](A)** ... primary fav channel list A is not selected
 1. off ... turn off TV
-1. @color[red](A) ... Favourite channel list A is not selected
-1. Press documented keys to send commands to TV
+1. Use computer's keys for remote controlling TV
 
 +++
 
@@ -195,6 +202,7 @@ RC Client &#8596; TV
 
 ![feature](assets/img/tab_feature.png)
 
+1. **A** ... favourite channel list A is selected
 1. Fade out/in ... lower/raise volume (with limit)
 1. Channels down/up ... walk through channel list (with skipping)
 1. Swap ... exchange current and stored channel
