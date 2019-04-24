@@ -92,7 +92,7 @@ Internet Research
 
 ### Research Network Setup
 
-![research](assets/img/network_diagram_research.jpg)
+![research nw](assets/img/network_diagram_research.jpg)
 
 ---
 
