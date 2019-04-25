@@ -23,9 +23,7 @@ import org.springframework.stereotype.Component;
 import javax.annotation.PostConstruct;
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionListener;
-import java.awt.event.WindowAdapter;
-import java.awt.event.WindowEvent;
+import java.awt.event.*;
 import java.util.Arrays;
 import java.util.Observable;
 import java.util.stream.IntStream;
@@ -84,6 +82,10 @@ public class Gui extends Observable implements GuiObservable {
         tabbedPane.addTab("skip CH", skipChannelPanel);
         frame.add(tabbedPane);
 
+        KeyAdapter keyListener = createKeyListener();
+        Stream.concat(Stream.of(frame, header, tabbedPane), Stream.of(tabbedPane.getComponents()))
+                .forEach(c -> c.addKeyListener(keyListener));
+
         setChanged();
         notifyObservers(new GuiEvent(GuiEvent.Type.SET_DISCONNECTED));
 
@@ -100,6 +102,19 @@ public class Gui extends Observable implements GuiObservable {
         frame.setVisible(true);
         adjustFormElements(false);
         frame.toFront();
+    }
+
+    private KeyAdapter createKeyListener() {
+        return new KeyAdapter() {
+            @Override
+            public void keyReleased(KeyEvent e) {
+                if (!e.isConsumed()) {
+                    setChanged();
+                    notifyObservers(new GuiEvent(GuiEvent.Type.KEY_PRESSED, e.getKeyCode()));
+                    e.consume();
+                }
+            }
+        };
     }
 
     private ActionListener getFavListActionListener() {
@@ -141,10 +156,19 @@ public class Gui extends Observable implements GuiObservable {
 
     void setCurrentChannelAndText(Integer currentChannelMajor, String currentChannelText) {
         SwingUtilities.invokeLater(() -> {
-            currentChannel.setText(String.format("%d - %s", currentChannelMajor, currentChannelText));
+            String newChannelText = abbreviate(currentChannelText, 25);
+            currentChannel.setText(String.format("%d - %s", currentChannelMajor, newChannelText));
             skipChannelPanel.setCurrentChannel(currentChannelMajor);
             featurePanel.setCurrentChannel(currentChannelMajor);
         });
+    }
+
+    private String abbreviate(String currentChannelText, int maxLength) {
+        String newChannelText = currentChannelText;
+        if (newChannelText.length() > maxLength) {
+            newChannelText = newChannelText.substring(0, maxLength - 3) + "...";
+        }
+        return newChannelText;
     }
 
     void setFavouriteChannelSelected(boolean favouriteChannelListIsSelected) {

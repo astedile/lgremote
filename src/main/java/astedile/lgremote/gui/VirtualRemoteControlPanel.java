@@ -19,8 +19,6 @@ package astedile.lgremote.gui;
 import org.springframework.stereotype.Component;
 
 import javax.swing.*;
-import java.awt.event.KeyAdapter;
-import java.awt.event.KeyEvent;
 
 /**
  * Panel with key listener that forwards key presses as remote control actions to TV.
@@ -30,12 +28,5 @@ class VirtualRemoteControlPanel extends ObservablePanel {
 
     VirtualRemoteControlPanel(KeyMapping keyMapping) {
         add(new JLabel(keyMapping.getDocumentation()));
-        addKeyListener(new KeyAdapter() {
-            @Override
-            public void keyReleased(KeyEvent e) {
-                setChanged();
-                notifyObservers(new GuiEvent(GuiEvent.Type.KEY_PRESSED, e.getKeyCode()));
-            }
-        });
     }
 }
