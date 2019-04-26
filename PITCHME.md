@@ -20,12 +20,14 @@ A little bit of network engineering for research.
 
 ## Presentation Overview
 
+@ol[](false)
 - Motivation
 - Aim
 - Research
 - API, Protocol
 - Application lgremote
 - Lessons Learned
+@olend
 
 ---
 
@@ -120,13 +122,13 @@ Internet Research
 
 ### Not-so-fun Facts
 
-@ul[]
-- "red button" is e.g. loaded from http://hbbtv.prosiebensat1puls4.com
-- ... with a lot of (tracking?) cookies in the request
-- The "red button" content is effectively just JavaScript executed in the TV's browser
-- ... including external tracking (http://cdn.wbtrk.net/js/geid.min.js)
-- All communication is plain text HTTP!
-- Injection of arbitrary JavaScript via MITM attacks &#8594; easy
+@ul[](false)
+- "red button" is e.g. loaded from http://hbbtv.prosiebensat1puls4.com  
+... with a lot of (tracking?) cookies in the request
+- The "red button" content is effectively just JavaScript executed in the TV's browser  
+... including external tracking (http://cdn.wbtrk.net/js/geid.min.js)
+- All communication is plain text HTTP!  
+... Injection of arbitrary JavaScript via MITM attacks &#8594; easy
 @ulend
 
 ---
@@ -140,14 +142,25 @@ Internet Research
 
 +++
 
+@snap[north span-100]
 ## ROAP - API, Protocol Phases
+@snapend
 
-RC Client &#8596; TV
-* &#8592; Device discovery &#8213;
-* &#8213; Authentication &#8594;
-* &#8213; Data request &#8594;
-* &#8213; Command &#8594;
-* &#8592; Event &#8594;
+@snap[west]
+![RC Client](assets/img/lgremote_client.jpg)
+@snapend
+
+@snap[midpoint text-center]
+&#8592; Device discovery &#8213;  
+&#8213; Authentication &#8594;  
+&#8213; Data request &#8594;  
+&#8213; Command &#8594;  
+&#8592; Event &#8594;
+@snapend
+
+@snap[east]
+![TV](assets/img/tv.jpg)
+@snapend
 
 ---
 
